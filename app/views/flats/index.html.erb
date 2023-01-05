@@ -1,0 +1,23 @@
+<div class="container">
+  <h1><i class="fa-brands fa-airbnb mb-3"></i> Simple Airbnb !</h1>
+  <div class="d-flex flex-wrap" >
+    <%@flats.each do |restaurant| %>
+      <div class="d-flex align-items-start me-3 mb-3 card p-3 rounded-7", style= "width: 400px;">
+        <div>
+          <img src="https://picsum.photos/200" alt="square immage">
+        </div>
+        <div>
+          <h3><%=restaurant.name%></h3>
+          <p><%=restaurant.address%></p>
+          <div class="d-flex align-items-center">
+            <p><i class="fa-solid fa-people-group me-2"></i><%=restaurant.number_of_guests%></p>
+            <p class="ms-3"><i class="fa-regular fa-credit-card me-2"></i><%=restaurant.price_per_night%></p>
+          </div>
+          <div>
+            <a href="#">More details !</a>
+          </div>
+        </div>
+      </div>
+    <%end%>
+  </div>
+</div>
